@@ -13,13 +13,13 @@
         <template slot-scope="{ item }">
             <div v-if="type === 'contract'">
                 <div class="name">编号：{{ item.resourceName }}</div>
-                <div class="addr">单位：山西肇新科技有限公司</div>
+                <div class="addr">单位：智慧物业有限公司</div>
                 <div class="addr">联系人：{{ item.userName }} {{ item.userPhone }}</div>
             </div>
             <div v-if="type === 'house'">
                 <div class="name">编号：{{ item.name }}</div>
                 <div class="addr">状态：{{ item.stateName }}</div>
-                <div v-if="item.state != 'empty'" class="addr">单位：山西肇新科技有限公司</div>
+                <div v-if="item.state != 'empty'" class="addr">单位：智慧物业有限公司</div>
             </div>
         </template>
     </el-autocomplete>
@@ -66,11 +66,11 @@ export default {
     },
     watch: {
         value: {
-            immediate: true,    // 这句重要
-            handler (val) {
+            immediate: true, // 这句重要
+            handler(val) {
                 this.content = val;
-            }
-        }
+            },
+        },
     },
     methods: {
         querySearch(queryString, cb) {
@@ -107,13 +107,13 @@ export default {
             }
         },
         handleSelect(item) {
-            if(this.type === 'house'){
+            if (this.type === 'house') {
                 this.content = item.name;
             }
-            if(this.type === 'contract'){
+            if (this.type === 'contract') {
                 this.content = item.resourceName;
             }
-            
+
             this.$emit('input', this.content);
         },
         handleIconClick(ev) {

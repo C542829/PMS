@@ -19,6 +19,6 @@ public interface ConfigHouseMapper extends BaseMapper<ConfigHouseEntity> {
 	//查询商铺租售的总记录
 	int getHouseContractCount(HouseContractPagination page);
 	
-	@Select("SELECT count(1) as count FROM config_house where state = #{state}")
+	@Select("SELECT count(1) as count FROM config_house where state = #{state} and enabled_mark = 1")
     int getHouseCountByState(@Param("state") String state);
 }

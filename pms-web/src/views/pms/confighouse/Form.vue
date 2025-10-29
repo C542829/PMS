@@ -20,13 +20,13 @@
             >
                 <el-col :span="24">
                     <el-form-item label="楼栋" prop="block">
-                         <el-cascader
+                        <el-cascader
                             v-model="dataForm.buildingSelect"
                             :options="buildings"
                             clearable
                             :style="{ width: '100%' }"
-                            @change="handleChange">
-                        </el-cascader>
+                            @change="handleChange"
+                        ></el-cascader>
                     </el-form-item>
                 </el-col>
                 <el-col :span="24">
@@ -250,7 +250,7 @@ export default {
                         url: '/baseconfig/House/' + this.dataForm.id,
                         method: 'get',
                     }).then(res => {
-                        res.data.buildingSelect = [res.data.block,res.data.building];
+                        res.data.buildingSelect = [res.data.block, res.data.building];
                         this.dataForm = res.data;
                         this.loading = false;
                     });

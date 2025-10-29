@@ -5,7 +5,7 @@
                 <el-form @submit.native.prevent>
                     <el-col :span="6">
                         <el-form-item label="编号">
-                            <HouseInput  v-model="query.resourceName"/>
+                            <HouseInput v-model="query.resourceName" />
                         </el-form-item>
                     </el-col>
                     <el-col :span="6">
@@ -26,7 +26,7 @@
             <div class="Jcommon-layout-main Jflex-main">
                 <div class="Jcommon-head">
                     <div>
-                        <el-button type="primary" icon="el-icon-upload2" @click="importHandle()">导入</el-button>
+                        <!-- <el-button type="primary" icon="el-icon-upload2" @click="importHandle()">导入</el-button> -->
                     </div>
                 </div>
                 <JTable v-loading="listLoading" :data="list">

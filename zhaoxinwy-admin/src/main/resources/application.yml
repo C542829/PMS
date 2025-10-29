@@ -1,7 +1,7 @@
 # 项目相关配置
 ruoyi:
   # 名称
-  name: 肇新智慧物业
+  name: 智慧物业
   # 版本
   version: 0.9.0
   # 版权年份
@@ -9,7 +9,7 @@ ruoyi:
   # 实例演示开关
   demoEnabled: false
   # 文件路径 示例（ Windows配置D:/ruoyi/uploadPath，Linux配置 /home/ruoyi/uploadPath）
-  profile: D:\java project\zhaoxinms\zhaoxinpms\Resources
+  profile: E:\Work_Space\Project_Space\zhaoxinpms\Resources
   # 获取ip地址开关
   addressEnabled: false
   # 验证码类型 math 数组计算 char 字符验证
@@ -24,7 +24,7 @@ ruoyi:
 # 开发环境配置
 server:
   # 服务器的HTTP端口，默认为8080
-  port: 8080
+  port: 8083
   servlet:
     # 应用的访问路径
     context-path: /
